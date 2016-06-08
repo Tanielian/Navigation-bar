@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Navigation</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body> 
+    
+
+     <!-- to make the structure more accessible to user agents that support WAI-ARIA 
+	as well as ensuring that user agents that don't support HTML5 can also understand the structure-->
+	
+	
+	<!-- WAI-ARIA is a spec defining support for accessible web apps. It defines bunch of markup extensions (mostly as attributes on HTML5 elements), which can be used by the web app developer to provide additional information about the semantics of the various elements to assistive technologies like screen readers. -->
+     <nav role="navigation">
+	 
+	 <!-- I used the checkbox value of the type attribute for the menu items-->
+    <input type="checkbox" id="button">
+    <label for="button" onclick></label>
+	
+	<!--
+	The <label> element does not render as anything special for the user. However, it provides a usability improvement for mouse users, because if the user clicks on the text within the <label> element, it toggles the control. -->
+	
+	<!-- The for attribute specifies which form element a label is bound to. -->
+    
+    <ul>
+        <li> <a id="home" href="index.html"> Home </a> </li>
+		<li> <a id="about" href="about.html"> About </a> </li>
+		<li> <a id="interests" href="interests.html"> Interests </a> </li>
+		<li> <a id="portfolio" href="portfolio.html"> Portfolio </a> </li>
+		<li> <a id="contact" href="contact.html"> Contact </a> </li>
+	 </ul>
+     </nav>
+     <!-- I used semantic elements instead of divs -->
+	 <section>
+		<h1>	This is the About page   </h1>
+		</section>
+		
+      
+	</body>
+</html>
