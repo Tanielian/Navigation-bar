@@ -90,7 +90,7 @@ nav[role="navigation"] ul > li:hover > a {
 
 /* The @media rule is used to define different style rules for different media types/devices. */
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 44em) {
   html,
   body {
     margin: 0;
