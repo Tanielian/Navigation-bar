@@ -3,16 +3,37 @@ Should they include the border-box? Or just the content-box (which is the defaul
 
 * {
   box-sizing: border-box; 
+  
 }
 /*When you specify CSS styles inside the "@keyframes rule", the animation will gradually change from the current style to the new style at certain times.*/
 
+
+@font-face {
+	font-family: 'menu';
+	src: url('../fonts/good times rg.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#home_image{
+	width:100%;
+	opacity:0.9;
+}
+
+
+
+html{
+	font-family:'Impact, Charcoal, sans-serif';
+	color:white;
+	letter-spacing: 1px;
+}
 
 html,
 body {
   width: 100%;
   height: 100%;
   margin:auto;
-  background-image: url('./images/3.JPG');
+  background-image: url('../images/3.JPG');
   background-size:100% 100%;
   position:relative;
   background-attachment:fixed;
@@ -20,11 +41,62 @@ body {
   text-decoration:none;
 }
 
+
+
+header{
+	background-color:black;
+	opacity:.8;
+}
+
+header a{
+	text-decoration:none;
+	float:left;
+	padding:20px;
+	opacity:0.5;
+}
+
+
+footer{
+	background-color:white;
+	opacity:.4;
+	color:yellow;
+	text-align:center;
+    padding:2px;
+	 right: 0;
+     bottom: 0;
+     left: 0;
+	position:relative;
+}
+footer a{
+	text-decoration:none;
+}
+.footer-container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+
 h1{
 	text-shadow: 4px 4px 4px #aaa;
     margin: 1px auto;
-    font-size:40px;
-    color: #fff;	
+	padding:20px;
+    color: #fff;
+text-align:center;	
 }
 
 
@@ -46,12 +118,12 @@ nav[role="navigation"] {
 }
 nav[role="navigation"] a,
 nav[role="navigation"] label {
-  color: #ccc;
+  color: white;
   text-decoration: none;
-  font: 1.4em sans-serif;
+  font-size: 10px; 
+  font-family:'menu';
   transition: color .4s ease-in-out;
 }
-
 
 nav[role="navigation"] ul {
   padding: 0;
@@ -60,15 +132,100 @@ nav[role="navigation"] ul {
   list-style: none;
 }
 
+	
+
+
+.section {
+	clear: both;
+	padding: 25px;
+	margin: 0px;
+	
+	
+}
+
+/*  GROUPING  ============================================================================= */
+
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+	padding:1em 0; 
+	border-radius: 10px;
+	text-align:justify;
+	background-color:black;
+	opacity:0.9;
+	font-size:20px;
+	
+}
+
+  
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 680px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+}
+
+
+.span_1_of_2 {
+	width: 49.2%;
+	padding:20px
+	}
+.home_content{
+	padding-bottom:60px;
+}
+.story{
+	width:20px;
+	display:flex;
+}
+.story{
+ border-radius: 8px;	
+}
+
+.about{
+	
+	width:100%;
+}
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 680px) {
+	
+	.span_1_of_2 {
+		width: 100%; 
+	}
+	.col{
+		font-size:10px;
+	}
+}
 /*We can select elements that are direct children of other elements
 A child element is any element that is nested directly in another element. Elements that are nested deeper than that are called descendant elements.
 ul > li will select all li that are a direct children ul*/
 
-nav[role="navigation"] ul > li {
+nav[role="navigation"] ul > li  {
   float: left;
   padding: .55em .55em;
   width: 20%;
-  background-color:tomato;
+  background-color:black;
+  opacity:0.8;
   text-align: center;
   transition-duration: .7s;
   transition-timing-function: linear;
@@ -77,12 +234,12 @@ nav[role="navigation"] ul > li {
   cursor: pointer;
 }
 nav[role="navigation"] ul > li:hover {
-  background-color: #00ffff;
+  background-color: white;
   color: #fff;
   box-shadow: 0 0.05em 0.25em 0 rgba(0, 0, 0, 0.35), inset 0 0 0 2em rgba(0, 0, 0, 0.3);
 }
 nav[role="navigation"] ul > li:hover > a {
-  color: #fff;
+  color: black;
 }
 
 /* Code for mobile devices */
@@ -90,7 +247,7 @@ nav[role="navigation"] ul > li:hover > a {
 
 /* The @media rule is used to define different style rules for different media types/devices. */
 
-@media screen and (max-width: 44em) {
+@media screen and (max-width: 680px) {
   html,
   body {
     margin: 0;
@@ -111,7 +268,8 @@ nav[role="navigation"] ul > li:hover > a {
     font-size: 1.1em;
     margin: 0;
     border: 0.15em solid rgba(60, 60, 60, 0.2);
-    background-color:tomato; 
+    background-color:black; 
+	opacity:0.8;
   }
   nav[role="navigation"] label:after {
     position: absolute;
