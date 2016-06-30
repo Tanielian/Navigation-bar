@@ -3,29 +3,23 @@
 
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Navigation</title>
         <link href="css/style.css" rel="stylesheet" type="text/css">	 
 	</head>
 	<body> 
     
 	<header>
-	   			  	
+	   			<img src="images/logo.png"/>  	
 	</header>
-	<!-- to make the structure more accessible to user agents that support WAI-ARIA 
-	as well as ensuring that user agents that don't support HTML5 can also understand the structure-->
 	
-	
-	<!-- WAI-ARIA is a spec defining support for accessible web apps. It defines bunch of markup extensions (mostly as attributes on HTML5 elements), which can be used by the web app developer to provide additional information about the semantics of the various elements to assistive technologies like screen readers. -->
      <nav role="navigation">
 	 
 	 <!-- I used the checkbox value of the type attribute for the menu items-->
     <input type="checkbox" id="button">
     <label for="button" onclick></label>
     
-	<!--
-	The <label> element does not render as anything special for the user. However, it provides a usability improvement for mouse users, because if the user clicks on the text within the <label> element, it toggles the control. -->
 	
-	<!-- The for attribute specifies which form element a label is bound to. -->
     <ul>
         <li> <a id="home" href="index.html"> Home </a> </li>
 		<li> <a id="about" href="about.html"> About </a> </li>
@@ -35,14 +29,43 @@
 	 </ul>
      </nav>
 		<!-- I used semantic elements instead of divs -->
-		<section>
-		<h1>	This is the Home page   </h1>
-		</section>
-      <p>Bacon ipsum dolor sit amet sirloin jerky meatball tenderloin pork belly bacon pork chop turkey, strip steak kielbasa hamburger ribeye ground round frankfurter spare ribs. Prosciutto chuck short loin chicken leberkas filet mignon ball tip fatback ham sirloin. Flank shank capicola sausage sirloin spare ribs. Bresaola pork chop spare ribs boudin, sirloin turkey pastrami doner capicola meatball tongue tenderloin frankfurter. Jowl ham hock turkey frankfurter, andouille beef ribs pork tail.</p>
-<p>Bacon ipsum dolor sit amet sirloin jerky meatball tenderloin pork belly bacon pork chop turkey, strip steak kielbasa hamburger ribeye ground round frankfurter spare ribs. Prosciutto chuck short loin chicken leberkas filet mignon ball tip fatback ham sirloin. Flank shank capicola sausage sirloin spare ribs. Bresaola pork chop spare ribs boudin, sirloin turkey pastrami doner capicola meatball tongue tenderloin frankfurter. Jowl ham hock turkey frankfurter, andouille beef ribs pork tail.</p>
-<p>Bacon ipsum dolor sit amet sirloin jerky meatball tenderloin pork belly bacon pork chop turkey, strip steak kielbasa hamburger ribeye ground round frankfurter spare ribs. Prosciutto chuck short loin chicken leberkas filet mignon ball tip fatback ham sirloin. Flank shank capicola sausage sirloin spare ribs. Bresaola pork chop spare ribs boudin, sirloin turkey pastrami doner capicola meatball tongue tenderloin frankfurter. Jowl ham hock turkey frankfurter, andouille beef ribs pork tail.</p>
-<p>Bacon ipsum dolor sit amet sirloin jerky meatball tenderloin pork belly bacon pork chop turkey, strip steak kielbasa hamburger ribeye ground round frankfurter spare ribs. Prosciutto chuck short loin chicken leberkas filet mignon ball tip fatback ham sirloin. Flank shank capicola sausage sirloin spare ribs. Bresaola pork chop spare ribs boudin, sirloin turkey pastrami doner capicola meatball tongue tenderloin frankfurter. Jowl ham hock turkey frankfurter, andouille beef ribs pork tail.</p>
-<p>Bacon ipsum dolor sit amet sirloin jerky meatball tenderloin pork belly bacon pork chop turkey, strip steak kielbasa hamburger ribeye ground round frankfurter spare ribs. Prosciutto chuck short loin chicken leberkas filet mignon ball tip fatback ham sirloin. Flank shank capicola sausage sirloin spare ribs. Bresaola pork chop spare ribs boudin, sirloin turkey pastrami doner capicola meatball tongue tenderloin frankfurter. Jowl ham hock turkey frankfurter, andouille beef ribs pork tail.</p>
-<p>Bacon ipsum dolor sit amet sirloin jerky meatball tenderloin pork belly bacon pork chop turkey, strip steak kielbasa hamburger ribeye ground round frankfurter spare ribs. Prosciutto chuck short loin chicken leberkas filet mignon ball tip fatback ham sirloin. Flank shank capicola sausage sirloin spare ribs. Bresaola pork chop spare ribs boudin, sirloin turkey pastrami doner capicola meatball tongue tenderloin frankfurter. Jowl ham hock turkey frankfurter, andouille beef ribs pork tail.</p>  
+		<section class="section group">
+	<div class="col span_1_of_2">
+	<img id="home_image" src="images/Taniel.jpg"/>
+
+	</div>
+	<div class="col span_1_of_2 home_content">
+	<h1> A little bit about me</h1>
+	My name is Taniel Tanielian, a fresh IT graduate, willing to build a career in the Tech industry. 
+	This website is my digital portfolio, and a way for me to share my story with all of you!
+	<p>
+	I graduated in 2015 from Tartous University in Syria, with Bachelor's of Science in Information Technology Engineering.</p>
+	<p>
+	After graduation,I worked in a Hotel in a Lebanon as a receptionist and front desk manager for a period of 5 months.</p>
+	<p> I have arrived in Canada on Dec 23rd of 2015, and ever since I am doing everything possible to reach my goals.
+	My focus is to success and that's how my life functions.
+	<br>This website is a digital representation of my portfolio, and a window for all of you to know me a little bit more..</p>
+	<p>
+	My hard skills are:
+		<ul>
+		<li>Front end web development.
+		<li>Management and Customer service.
+		<li>Troubleshooting.
+		<li>hardware maintenacne.
+		<li>Programming.
+		</ul>
+		You can find more about my skills and experiances in the about page.
+	</div>        
+</section>
+<footer class="footer_container">
+				 <a href="index.html"> <img src="images/home.png"/> </a> 
+				 <a href="about.html"> <img src="images/about.png"/> </a> 
+				 <a href="interests.html"> <img src="images/interests.png"/> </a>
+				 <a href="portfolio.html"> <img src="images/portfolio.png"/> </a> 
+				 <a href="contact.html"> <img src="images/contacts.png"/> </a>
+				 
+			
+
+</footer>
 	</body>
 </html>
